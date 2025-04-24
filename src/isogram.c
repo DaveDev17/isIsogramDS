@@ -4,13 +4,27 @@
 #include <string.h>
 #include <stdio.h>
 #include <inttypes.h>
-#include <string.h>
+#include <stdlib.h>
 
+int main(int argc, char* argv[])
+{
+    // check of there is only one parameter
+    if (argc != 2)
+    {
+        // output a message otherwise (usage: isogram <phrase>)
+        printf("invalid input parameter! usage: isogram <phrase>\n");
+        return EXIT_FAILURE;
+    }
+    // call is_isogramm and pass the argument
+    // if result is true: print yes
+    // if result is false: print no
+    printf("%s\n", (is_isogram(argv[1]) == 0) ? "no" : "yes");
+}
 
 char to_lower(char letter){
     if(letter >= 'A' && letter <= 'Z'){
         return letter + 'a' - 'A';
-    }else if(letter >= 'a' && letter <= 'z'){
+    } else if(letter >= 'a' && letter <= 'z'){
         return letter;
     }
     printf("No char\n");
@@ -35,19 +49,6 @@ bool is_isogram(const char phrase[]){
 
         i++;
     }
-
     printf("True\n");
     return true;
 }
-
-// int main(int argc, char* argv[]){
-
-//     for(uint8_t i=1; i<argc; i++){
-
-//         printf("%s\n",argv[i]);
-
-//         is_isogram(argv[i]);
-//     }
-
-//     return 0;
-// }
