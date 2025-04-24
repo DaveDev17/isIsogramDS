@@ -31,21 +31,17 @@ char to_lower(char letter){
 }
 
 bool is_isogram(const char phrase[]){
-
     uint8_t letter_occurences[26] = {0};
-    uint8_t i=0;
+    uint8_t i = 0;
     while(phrase[i] != '\0'){
-        
-        uint8_t current_char = to_lower(phrase[i])-'a';
+        uint8_t current_char = to_lower(phrase[i]) - 'a';
         if (letter_occurences[current_char] != 1){
             letter_occurences[current_char] = 1;
             
             printf("current_char = %d\n",current_char);
-
         } else{
             return false;
         }
-
         i++;
     }
     return true;
