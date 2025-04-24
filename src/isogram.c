@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
     // call is_isogramm and pass the argument
     // if result is true: print yes
     // if result is false: print no
-    printf("%s\n", (is_isogram(argv[1]) == 0) ? "yes" : "no");
+    printf("%s\n", (is_isogram(argv[1]) == 0) ? "no" : "yes");
 }
 
 
