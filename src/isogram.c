@@ -27,7 +27,7 @@ char to_lower(char letter){
     } else if(letter >= 'a' && letter <= 'z'){
         return letter;
     }
-    printf("No char\n");
+    printf("No Letter\n");
 }
 
 bool is_isogram(const char phrase[]){
@@ -43,12 +43,10 @@ bool is_isogram(const char phrase[]){
             printf("current_char = %d\n",current_char);
 
         } else{
-            printf("No\n");
             return false;
         }
 
         i++;
     }
-    printf("True\n");
     return true;
 }
