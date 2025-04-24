@@ -1,10 +1,10 @@
-#define UNITY_OUTPUT_COLOR
-
 #include "isogram.h"
 #include <string.h>
 #include <stdio.h>
 #include <inttypes.h>
 #include <stdlib.h>
+
+#define UNITY_OUTPUT_COLOR
 
 int main(int argc, char* argv[])
 {
@@ -37,7 +37,6 @@ bool is_isogram(const char phrase[]){
         uint8_t current_char = to_lower(phrase[i]) - 'a';
         if (letter_occurences[current_char] != 1){
             letter_occurences[current_char] = 1;
-            
             printf("current_char = %d\n",current_char);
         } else{
             return false;
